@@ -1,0 +1,34 @@
+<h1 style="text-align: center;">Conways's Game Of Life</h1>
+
+<div class="container" 
+[style.width.px] = "width" 
+[style.height.px] = "height" >
+    <div *ngFor="let x of table; let i = index" >
+        <div *ngFor="let y of x; let j = index" class="node" (click) = "toggle(i,j)"  
+        [class.alive] = "y" 
+        [style.width.px] = "resolution" 
+        [style.height.px] = "resolution" ></div>
+    </div>
+</div>
+
+<div class="clear"></div>
+
+<div class="input sticky-top">
+    <button class="btn btn-success" (click) = "start()">Start</button>
+    <button class="btn btn-primary" (click) = "reset()">Random</button>
+    <button class="btn btn-primary" (click) = "clear()">Clear</button>
+    <button class="btn btn-danger" (click) = "stop()">Stop</button><br>
+    <p>You have to press stop.</p><br><br>
+    <p>
+        The next table state is determined by the initial state. Each state has 4 basic rules applied to it: 
+    </p>
+    <ol>
+        <li>Any live cell with fewer than two live neighbours dies, as if by underpopulation.</li>
+        <li>Any live cell with two or three live neighbours lives on to the next generation.</li>
+        <li>Any live cell with more than three live neighbours dies, as if by overpopulation.</li>
+        <li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
+    </ol>
+    <p>
+        You can read more about Conway's Game of Life <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_empty" style="font-style: italic; color:blue">here</a>. 
+    </p>
+</div>

@@ -1,0 +1,9 @@
+a{
+    cursor: pointer;
+}
+nav{
+    background-color: rgb(29, 31, 33);
+}
+nav a{
+    color:rgb(178, 148, 187);
+}
