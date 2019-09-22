@@ -14,9 +14,13 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 
+import { MatIconModule } from '@angular/material/icon';
+import { ContactComponent } from './contact/contact.component'
+
 const routes = [
   {path:"", component:HomeComponent},
-  {path:"conways-game-of-life", component:ConwaysGameOfLifeComponent}
+  {path:"conways-game-of-life", component:ConwaysGameOfLifeComponent},
+  {path:"contact", component:ContactComponent},
 ]
 
 @NgModule({
@@ -24,7 +28,8 @@ const routes = [
     AppComponent,
     ConwaysGameOfLifeComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +38,7 @@ const routes = [
     AppRoutingModule,
     MatSliderModule,
     MatMenuModule,
+    MatIconModule,
     NgbModule,
     AppRoutingModule,
     RouterModule.forRoot(routes)

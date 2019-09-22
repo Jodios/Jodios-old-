@@ -9,4 +9,16 @@ body{
     background-color: rgb(29, 31, 33);
     color:rgba(255, 255, 255, 0.776);
 }
+.card{
+    background-color: rgb(40, 42, 46);
+    color:rgba(255, 255, 255, 0.776);
+    width: 98%; 
+    margin:10px;
+}
+
+.card-img-top{
+    width:100%;
+    max-height: 500px;
+    object-fit:contain;
+}
 

@@ -1,8 +1,11 @@
 a{
+
     cursor: pointer;
 }
 nav{
     background-color: rgb(29, 31, 33);
+    border-bottom-style: solid;
+    border-bottom-color: rgb(23, 24, 26);
 }
 nav a{
     color:rgb(178, 148, 187);

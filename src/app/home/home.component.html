@@ -1,1 +1,48 @@
-<p>home works!</p>
+
+<div class="wrapper">
+    <!-- 
+        LEFT
+     -->
+    <div class="left">
+        <div class="profile" style="width: 100%; text-align:center;">
+            <a href="https://github.com/SirSamhain" target="_empty">
+                <img src="https://lh3.googleusercontent.com/-vnQpyCByS-U/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rc__E5mmcCF9eXf9KL1ljSRNA1sDg.CMID/s96-c/photo.jpg" alt="" class="profilePic">
+            </a>
+            <p>I am Joel Ortiz, a Computer Science student at Tarleton State University. I will be graduating in Fall of 2019.</p>
+        </div>
+        <h4><b>This Site:</b></h4>
+        <p>I am making this website to learn how to visualize algorithms. I currently only have Conway's life
+            <a routerLink="/conways-game-of-life" style="font-style: italic">here</a>, but I plan on adding many more
+            very soon. This home page shows a couple of my projects that I have saved.
+        </p>
+        <a href="https://www.dropbox.com/s/nyvbslu292do5qf/Joel%27s%20Resume.pdf?dl=0" target="_empty">
+            <mat-icon placement="top" ngbTooltip="Resume">picture_as_pdf</mat-icon>
+        </a>
+        <a href="mailto:joelortiz@protonmail.com"><mat-icon>email</mat-icon></a>
+        <mat-icon placement="top" ngbTooltip="325-330-2734">phone</mat-icon><br><br>
+        <h4><b>Interests:</b></h4>
+        <div class="btn btn-primary interests" *ngFor="let interest of interests">{{interest}}</div>
+    </div>
+
+    <!-- 
+        MAIN CONTENT
+     -->
+    <div class="main">
+        <header><h1>Other Projects</h1></header>
+        <div class="card" *ngFor="let project of projects">
+            <a [href]="project.link" target="_empty"><img class="card-img-top" [src] = "project.imgurl"></a>            
+            <div class="card-body">
+                <h2 class="card-title">{{project.title}}</h2>
+                <p class="card-text">{{project.description}}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+        RIGHT
+     -->
+    <div class="right">
+        
+    </div>
+</div>
+

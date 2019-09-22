@@ -1,0 +1,55 @@
+.left{
+    top:0px;
+    float: left;
+    height:100%;
+    width:20%;
+}
+.main{
+    text-align: center;
+    float: left;
+    top:0;
+    height:100%;
+    width: 60%;
+    padding: 10px;
+    border-left-style: solid;
+    border-left-color: rgb(23, 24, 26);
+    border-right-style: solid;
+    border-right-color: rgb(23, 24, 26);
+}
+.right{
+    top:0px;
+    height:100%;
+    width:20%;
+    float:left;
+}
+
+.wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    padding:10px;
+}
+
+.profilePic{
+    width:150px;
+    height: 150px;
+    border-radius: 100%;
+}
+mat-icon{
+    cursor: pointer;
+    color: #007bff;
+}
+#github{
+    background-color: #007bff;
+    width: 25px;
+    height: 25px;
+    margin-top: 0;
+    margin-right: 5px;
+}
+
+header{
+    text-align: center;
+}
+
+.interests{
+    margin: 5px;
+}

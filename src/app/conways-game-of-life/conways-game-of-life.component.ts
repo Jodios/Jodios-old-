@@ -13,7 +13,7 @@ export class ConwaysGameOfLifeComponent implements OnInit {
   alive:boolean;
   width:number = 1000;
   height:number = 1000;
-  resolution:number = 20;
+  resolution:number = 25;
   interval;
 
   constructor() { }
