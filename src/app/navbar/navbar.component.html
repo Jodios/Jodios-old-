@@ -10,18 +10,25 @@
                 <a class="nav-link" routerLink="/conways-game-of-life">Game of Life</a>
             </li>            
 
-            <!-- <li class="nav-item">
+            <li class="nav-item">
                 <div ngbDropdown class="d-inline-block">
-                    <a ngbDropdownToggle id="dropdownBasic1" class="nav-link dropdown">Dropdown</a>
-                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                        <a ngbDropdownItem routerLink="/my/orders">My Orders</a>
-                        <a ngbDropdownItem routerLink="/admin/orders">Manage Orders</a>
-                        <a ngbDropdownItem routerLink="/admin/products">Manage Products</a>
-                        <a ngbDropdownItem (click) = "logout()">Log Out</a>
+                    <a ngbDropdownToggle id="dropdownBasic1" class="nav-link dropdown">Sorting</a>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" style="background-color: rgb(40, 42, 46);">
+                        <a ngbDropdownItem [routerLink]="['/sorting/bubble-sort']" >Bubble Sort</a>
+                        <a ngbDropdownItem disabled style="text-decoration:line-through;">Quick Sort</a>
+                        <a ngbDropdownItem disabled style="text-decoration:line-through;">Selection Sort</a>
                     </div>
                 </div>
-            </li> -->
+            </li>       
 
+            <li class="nav-item">
+                <div ngbDropdown class="d-inline-block">
+                    <a ngbDropdownToggle id="dropdownBasic1" class="nav-link dropdown">Path Finding</a>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" style="background-color: rgb(40, 42, 46);">
+                        <a ngbDropdownItem disabled style="text-decoration:line-through;">Dijkstra's algorithm</a>
+                    </div>
+                </div>
+            </li>
 
         </ul>
 

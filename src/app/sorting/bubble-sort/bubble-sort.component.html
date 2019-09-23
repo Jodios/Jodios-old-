@@ -1,0 +1,26 @@
+
+<div class="wrapper">
+    <div class="left" style="text-align: center;">
+        
+        <input type="number" [(ngModel)] = "n" (change)="randomize()" style="text-align: center; border-radius:4px;"><br>
+        <!-- <mat-slider thumbLabel step="10" tickInterval="100" [(ngModel)] = "n" [displayWith]="randomize()"></mat-slider><br> -->
+        <button class="btn btn-primary" (click) = "randomize()">Randomize</button>
+        <button class="btn btn-primary" (click) = "start()">Sort</button>
+    </div>
+
+    <div class="main">
+        <header><h1>Bubble Sort Sort</h1></header>
+        <canvas #canvas>
+
+        </canvas>
+    </div>
+
+    <div class="right">
+        <h4>Description:</h4>
+        <p>Bubble sort is a sorting algorithm that iterates through a list, compares adjacent elements and swaps them if they're in the wrong order.</p>
+        <h4>Complexity:</h4>
+        <p>Bubble sort's worst case scenario is <i>O(n<sup>2</sup>)</i>, meaning that at its worst, it will make n<sup>2</sup> comparisons. 
+        It's the simplest sorting algorithm, and also one of the most inefficient ones. </p>
+        <p>You can read more about bubble sort <a href="https://en.wikipedia.org/wiki/Bubble_sort" target="_empty"><i>here</i></a>.</p>
+    </div>
+</div>

@@ -15,12 +15,19 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 
 import { MatIconModule } from '@angular/material/icon';
-import { ContactComponent } from './contact/contact.component'
+import { ContactComponent } from './contact/contact.component';
+import { QuickSortComponent } from './sorting/quick-sort/quick-sort.component';
+import { BubbleSortComponent } from './sorting/bubble-sort/bubble-sort.component';
+import { SelectionSortComponent } from './sorting/selection-sort/selection-sort.component'
+import { TimingService } from './services/timing-service.service';
 
 const routes = [
   {path:"", component:HomeComponent},
   {path:"conways-game-of-life", component:ConwaysGameOfLifeComponent},
   {path:"contact", component:ContactComponent},
+  {path:"sorting/quick-sort", component: QuickSortComponent},
+  {path:"sorting/bubble-sort", component: BubbleSortComponent},
+  {path:"sorting/selection-sort", component: SelectionSortComponent},
 ]
 
 @NgModule({
@@ -29,7 +36,10 @@ const routes = [
     ConwaysGameOfLifeComponent,
     NavbarComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    QuickSortComponent,
+    BubbleSortComponent,
+    SelectionSortComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +53,9 @@ const routes = [
     AppRoutingModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    TimingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
