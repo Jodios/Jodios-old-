@@ -5,7 +5,7 @@
 }
 mat-icon{
     cursor: pointer;
-    color: #007bff;
+    color: #008cff;
 }
 
 header{
@@ -13,5 +13,12 @@ header{
 }
 
 .interests{
+    border:none;
+    background-color:#008cff;
+    margin: 5px;
+}
+.interests:hover{
+    border:none;
+    background-color:#007adf;
     margin: 5px;
 }

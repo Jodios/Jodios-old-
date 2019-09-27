@@ -8,7 +8,7 @@ import { ConwaysGameOfLifeComponent } from './conways-game-of-life/conways-game-
 
 import { MatSliderModule } from "@angular/material/slider"
 import { MatMenuModule } from "@angular/material/menu"
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
@@ -20,6 +20,14 @@ import { QuickSortComponent } from './sorting/quick-sort/quick-sort.component';
 import { BubbleSortComponent } from './sorting/bubble-sort/bubble-sort.component';
 import { SelectionSortComponent } from './sorting/selection-sort/selection-sort.component'
 import { TimingService } from './services/timing-service.service';
+import { AngularFireFunctionsModule } from '@angular/fire/functions'
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from 'src/environments/environment';
+import { EmailService } from './services/email.service';
+import { HttpClientModule } from '@angular/common/http'
+import { fb } from 'config';
+
 
 const routes = [
   {path:"", component:HomeComponent},
@@ -51,10 +59,18 @@ const routes = [
     MatIconModule,
     NgbModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(fb.firebase),
+    AngularFireFunctionsModule,
+    AngularFireModule,
+    AngularFireDatabaseModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   providers: [
-    TimingService
+    TimingService,
+    EmailService
   ],
   bootstrap: [AppComponent]
 })

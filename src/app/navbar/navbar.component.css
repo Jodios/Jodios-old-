@@ -9,12 +9,17 @@ nav{
     z-index: 10000;
 }
 nav a{
-    color:rgb(178, 148, 187);
+    color:rgb(0, 140, 255);
 }
 nav a:hover{
-    color:white;
+    color:rgb(0, 103, 187);
 }
-
+.navbar-brand img{
+    color:rgb(0, 140, 255);
+    font-size: 25px;
+    max-width: 45px;
+    max-height: 45px;
+}
 nav .dropdown a:hover{
     background-color: rgb(29, 31, 33);
 }

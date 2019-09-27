@@ -56,6 +56,7 @@ export class BubbleSortComponent implements OnInit {
 
   randomize(){
     this.heightValues = []
+    if(this.n > 100){this.n = 100;}
     this.initLines();
     this.clear();
     this.drawLines();
@@ -66,7 +67,7 @@ export class BubbleSortComponent implements OnInit {
   }
 
   drawLines(){
-    let w = this.canvas.nativeElement.width;
+    let w = this.canvas.nativeElement.width-10;
     let h = this.canvas.nativeElement.height;
     let lw = Math.round(w / this.n); 
     let temp = this.n;

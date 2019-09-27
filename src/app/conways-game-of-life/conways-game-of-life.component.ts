@@ -14,7 +14,9 @@ export class ConwaysGameOfLifeComponent implements OnInit {
   width:number = 1000;
   height:number = 1000;
   resolution:number = 25;
-  interval;
+  animation;
+  stopped:boolean;
+  status = "stopped"
 
   constructor() { }
 
@@ -59,12 +61,17 @@ export class ConwaysGameOfLifeComponent implements OnInit {
     }
   }
   start(){    
-    this.interval = window.setInterval(x => {
-      let y = this.startLife();
-    },200)   
+    // this.interval = window.setInterval(x => {
+    //   let y = this.startLife();
+    // },200)   
+    this.stopped = false;
+    this.status = "running";
+    this.startLife();
   }
   stop(){
-    clearInterval(this.interval);
+    this.stopped = true;
+    this.status = "stopped";
+    cancelAnimationFrame(this.animation);
   }
   startLife(){
     let x: boolean = false;
@@ -84,7 +91,10 @@ export class ConwaysGameOfLifeComponent implements OnInit {
       }
     }
     this.table = nextGen;
-    return x;
+    if(!this.stopped){
+      this.animation = requestAnimationFrame(this.startLife.bind(this))
+    }
+    
 
   }
 

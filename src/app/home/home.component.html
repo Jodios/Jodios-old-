@@ -11,8 +11,9 @@
             <p>I am Joel Ortiz, a Computer Science student at Tarleton State University. I will be graduating in Fall of 2019.</p>
         </div>
         <h4><b>This Site:</b></h4>
-        <p>I am making this website to learn how to visualize algorithms. I currently only have Conway's life
-            <a routerLink="/conways-game-of-life" style="font-style: italic">here</a>, but I plan on adding many more
+        <p>I am making this website to learn how to visualize algorithms. The first algorithm I animated was
+             Conway's life, which you can find 
+            <a routerLink="/conways-game-of-life" style="font-style: italic">here</a>. I plan on adding many more
             very soon. This home page shows a couple of my projects that I have saved.
         </p>
         <a href="https://www.dropbox.com/s/nyvbslu292do5qf/Joel%27s%20Resume.pdf?dl=0" target="_empty">
@@ -29,6 +30,13 @@
      -->
     <div class="main">
         <header><h1>Other Projects</h1></header>
+        <div class="card">
+            <a href="https://github.com/SirSamhain/TOGI" target="_empty"><img class="card-img-top" src = "../assets/TOGI.png"></a>            
+            <div class="card-body">
+                <h2 class="card-title">TOGI</h2>
+                <p class="card-text">TOGI was a discussion board where anonymous users could discuss certain topics of interest. The website was hosted using AWS and Glassfish server. Post content was stored in a database using AWS MySQL database. Unfortunately, TOGI has been re-deployed using firebase and Angular 8 <a href='https://thetogi.firebaseapp.com' target='_empty'><i>here</i></a>, and the original source code is available if you click the image.</p>
+            </div>
+        </div>
         <div class="card" *ngFor="let project of projects">
             <a [href]="project.link" target="_empty"><img class="card-img-top" [src] = "project.imgurl"></a>            
             <div class="card-body">

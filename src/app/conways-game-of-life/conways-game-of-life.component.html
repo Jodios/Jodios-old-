@@ -8,7 +8,9 @@
         <button class="btn btn-primary" (click) = "reset()">Random</button>
         <button class="btn btn-primary" (click) = "clear()">Clear</button>
         <button class="btn btn-danger" (click) = "stop()">Stop</button><br>
-        <p>You have to press stop.</p><br><br>
+        <p
+        [style.color]="(status==='stopped') ? 'red' : 'green'"
+        >{{status}}</p><br>
         <p>
             The next table state is determined by the initial state. Each state has 4 basic rules applied to it: 
         </p>

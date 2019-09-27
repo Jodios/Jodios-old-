@@ -20,12 +20,6 @@ export class HomeComponent implements OnInit {
 
     this.projects = [
       {
-        imgurl:'../assets/TOGI.png',
-        title:'TOGI',
-        link:'https://github.com/SirSamhain/TOGI',
-        description:"TOGI was a discussion board where anonymous users could discuss certain topics of interest. The website was hosted using AWS and Glassfish server. Post content was stored in a database using AWS MySQL database. Unfortunately, TOGI had to be taken down due to the costs; however, source code is available if you click the image.",
-      },
-      {
         // imgurl:'https://raw.githubusercontent.com/SirSamhain/SEP/master/TempName/app/back.png',
         imgurl:'../assets/Achieve.png',
         title:'Achieve',

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireFunctions } from '@angular/fire/functions';
+import { EmailService } from '../services/email.service';
 
 @Component({
   selector: 'contact',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(private firebaseFunction : AngularFireFunctions, private emailService: EmailService) { }
 
   ngOnInit() {
   }
+
+  submit(email,name,message, form:HTMLFormElement){
+    this.emailService.sendEmail(email.value,name.value,message.value);
+    form.reset();
+  }
+
 
 }

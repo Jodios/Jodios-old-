@@ -41,6 +41,7 @@ body{
 .left{
     top:0px;
     float: left;
+    height: 100%;
     width:20%;
 }
 .main{
@@ -67,4 +68,13 @@ body{
     margin-left: auto;
     margin-right: auto;
     padding:10px;
+}
+
+.btn-primary{
+    background-color: #008cff;
+    border:none;
+}
+.btn-primary:hover{
+    background-color: #0074d3;
+    border:none;
 }
