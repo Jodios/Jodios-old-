@@ -1,0 +1,24 @@
+
+
+
+<div class="wrapper">
+    <div class="left">
+        N:<br>
+        <mat-slider step="1" thumbLabel tickInterval="interval" [(ngModel)]="N" min="1" max="10"></mat-slider>{{N}}<br>
+        Frequency:<br>
+        <mat-slider step=".05" thumbLabel tickInterval="interval" [(ngModel)]="av" min=".02" max=".2"></mat-slider>{{av}}<br>
+        
+    </div>
+    <div class="main">
+        <h1>Fourier Series</h1>
+        <canvas #myCanvas></canvas>
+    </div>
+    <div class="right">
+        <h4>About:</h4>
+        <p>A Fourier series is a periodic function made up of the summation of various waves. You can use a Fourier 
+            series to approximate any wave. This is only approximating a square wave which are mostly used in digital 
+            circuits as a clock.</p>
+        <p>You can see as you increase N, the sin wave more closely resembles a square wave.</p>
+        <p>Read more <a href="https://en.wikipedia.org/wiki/Fourier_series#Convergence" target="_empty"><i>here</i></a>.</p>
+    </div>
+</div>

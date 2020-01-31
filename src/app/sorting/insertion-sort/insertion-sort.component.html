@@ -1,0 +1,26 @@
+
+<div class="wrapper">
+    <div class="left" style="text-align: center;">
+        
+        <input type="number" [(ngModel)] = "n" (change)="randomize()" style="text-align: center; border-radius:4px;"><br>
+        <!-- <mat-slider thumbLabel step="10" tickInterval="100" [(ngModel)] = "n" [displayWith]="randomize()"></mat-slider><br> -->
+        <button class="btn btn-primary" (click) = "randomize()">Randomize</button>
+        <button class="btn btn-primary" (click) = "sort()">Sort</button>
+    </div>
+
+    <div class="main">
+        <header><h1>Insertion Sort</h1></header>
+        <canvas #canvas>
+
+        </canvas>
+    </div>
+
+    <div class="right">
+        <h4>Description:</h4>
+        <p>Insertion sort is a sorting algorithm that splits an array into sorted and unsorted segments. The left is sorted and starts and keeps growing as the list gets sorted.</p>
+        <h4>Complexity:</h4>
+        <p>Insertion sort's worst case scenario is <i>O(n<sup>2</sup>)</i>, meaning that at its worst, it will make n<sup>2</sup> comparisons. 
+        It's a very simple algorithm and works good enough on smaller arrays. </p>
+        <p>You can read more about insertion sort <a href="https://en.wikipedia.org/wiki/Insertion_sort" target="_empty"><i>here</i></a>.</p>
+    </div>
+</div>

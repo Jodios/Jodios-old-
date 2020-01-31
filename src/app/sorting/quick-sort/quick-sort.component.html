@@ -1,0 +1,29 @@
+<div class="wrapper">
+    <div class="left" style="text-align: center;">        
+            <input type="number" [(ngModel)] = "n" (change)="randomize()" style="text-align: center; border-radius:4px;"><br>
+            <!-- <mat-slider thumbLabel step="10" tickInterval="100" [(ngModel)] = "n" [displayWith]="randomize()"></mat-slider><br> -->
+            <button class="btn btn-primary" (click) = "randomize()">Randomize</button>
+            <button class="btn btn-primary" (click) = "start()">Sort</button>
+    </div>
+
+    <div class="main">
+        <h1>Quick Sort</h1>
+        <canvas #canvas></canvas>
+    </div>
+
+    <div class="right">
+        <h4>Description:</h4>
+        <p>Quick sort is a divide and conquer sorting algorithm that partitions a list into smaller bits and sorts them recursively.</p>
+
+        <h4>Complexity:</h4>
+        <p>Quick sort's worst case scenario is <i>O(n<sup>2</sup>)</i>, meaning that at its worst, it will make n<sup>2</sup> comparisons; however, 
+            that only happens when you try and sort a list that is already sorted. On average, Quick Sort is <i>O( n<i>Log</i>(n) )</i> </p>
+        
+        <h4>Partitioning Schemes:</h4>
+        <p>There are different ways to implement the partitioning of the list. This particular implementation is using the 
+            <a href="https://en.wikipedia.org/wiki/Quicksort#Lomuto_partition_scheme" target="_blank"><i>Lomuto partition scheme</i></a>.   
+
+        Partitioning schemes <i>do</i> affect the performance of this algorithm, you can read more
+         <a href="https://en.wikipedia.org/wiki/Quicksort" target="_empty"><i>here</i></a>.</p>
+    </div>
+</div>

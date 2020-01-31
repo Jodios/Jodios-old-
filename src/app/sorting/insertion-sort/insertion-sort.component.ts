@@ -1,24 +1,21 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { TimingService } from 'src/app/services/timing-service.service';
 
 @Component({
-  selector: 'app-bubble-sort',
-  templateUrl: './bubble-sort.component.html',
-  styleUrls: ['./bubble-sort.component.css']
+  selector: 'app-insertion-sort',
+  templateUrl: './insertion-sort.component.html',
+  styleUrls: ['./insertion-sort.component.css']
 })
-export class BubbleSortComponent implements OnInit {
+export class InsertionSortComponent implements OnInit {
   @ViewChild('canvas',{static:true}) canvas: ElementRef<HTMLCanvasElement>;
   context:CanvasRenderingContext2D;
   heightValues:number[] = [];
-  states: number[] = [];
+  colours:string[] = [];
   n = 15;
-  i = 0;
-  j = 0;
-  animation = null;
-  stopped:boolean;
   width;
   height;
 
-  constructor() { 
+  constructor(private timer : TimingService) { 
   } 
 
   ngOnInit() {
@@ -29,37 +26,31 @@ export class BubbleSortComponent implements OnInit {
     this.context.transform(1, 0, 0, -1, 0, this.canvas.nativeElement.height)
     this.drawLines();
   }
+  async sort(){
+    for (let i = 1; i < this.heightValues.length; i++){
+        let val = this.heightValues[i]
+        for(let j = i-1; j >= 0; j--){
+            if(this.heightValues[j] > val){
+                this.swap(j, j+1)
+                this.colours[i] = 'green'
+                this.colours[j+1] = 'purple'
+                this.clear()
+                this.drawLines()
+                this.colours[i] = "rgba(220, 160, 255, 0.8)"
+                this.colours[j+1] = "rgba(220, 160, 255, 0.8)"
+                await this.timer.sleep(100)
+            }else{
+                j = 0
+            }
+        }
+    }
 
-  draw(){
-    let a = this.heightValues[this.j];
-    let b = this.heightValues[this.j+1];
-    if (a > b){
-      this.states[this.j] = 1
-      this.states[this.j+1] = 2
-      this.swap(this.j,this.j+1);
-      this.clear();
-      this.drawLines();
-      this.states[this.j] = 0
-      this.states[this.j+1] = 0
-    }
-    if(this.i < this.heightValues.length){
-      this.j += 1;
-      if (this.j >= this.heightValues.length -1 -this.i){
-        this.j = 0;
-        this.i += 1;
-      }
-    }else{
-      this.stop();
-    }
-    if(!this.stopped){
-      this.animation = requestAnimationFrame(this.draw.bind(this))
-    }    
   }
 
   initLines(){
     for (let i = 0; i < this.n; i++){
       this.heightValues.push(Math.random()*this.height);
-      this.states[i] = 0;
+      this.colours[i] = "rgba(220, 160, 255, 0.8)";    
     }
   }
 
@@ -84,14 +75,7 @@ export class BubbleSortComponent implements OnInit {
     
     for (let i = 0; i < this.heightValues.length; i++){
       let x = (lw * i) + (margin * i);
-      if(this.states[i] == 0){
-        this.context.fillStyle = "rgba(220, 160, 255, 0.8)"
-      }else if(this.states[i] == 2){
-        this.context.fillStyle = "red"
-      }else{
-        this.context.fillStyle = "purple"
-      }
-      
+      this.context.fillStyle = this.colours[i]
       this.context.strokeRect(x, 0, lw, this.heightValues[i]);
       this.context.fillRect(x, 0, lw, this.heightValues[i]);
     }
@@ -102,21 +86,6 @@ export class BubbleSortComponent implements OnInit {
     let temp = this.heightValues[a];
     this.heightValues[a] = this.heightValues[b];
     this.heightValues[b] = temp;
-  }
-
-  start(){
-    this.stopped = false;
-    this.animation = requestAnimationFrame(this.draw.bind(this))
-  }
-  
-  stop() {
-    if (this.animation) {
-      this.j = 0;
-      this.i = 0;
-      this.stopped = true;
-      window.cancelAnimationFrame(this.animation);
-      this.animation = null;
-    }
   }
 
 }

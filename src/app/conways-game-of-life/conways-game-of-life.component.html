@@ -4,6 +4,8 @@
 <div class="wrapper">
 
     <div class="left sticky-top" style="text-align: center;">
+        Change Speed<br>
+        <mat-slider step="10" thumbLabel tickInterval="interval" [(ngModel)]="speed" min="10" max="1000"></mat-slider>{{speed}}ms<br>
         <button class="btn btn-success" (click) = "start()">Start</button>
         <button class="btn btn-primary" (click) = "reset()">Random</button>
         <button class="btn btn-primary" (click) = "clear()">Clear</button>

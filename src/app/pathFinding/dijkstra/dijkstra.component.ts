@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { TimingService } from '../services/timing-service.service';
-
+import { TimingService } from 'src/app/services/timing-service.service';
 
 @Component({
-  selector: 'conways-game-of-life',
-  templateUrl: './conways-game-of-life.component.html',
-  styleUrls: ['./conways-game-of-life.component.css']
+  selector: 'app-dijkstra',
+  templateUrl: './dijkstra.component.html',
+  styleUrls: ['./dijkstra.component.css']
 })
-export class ConwaysGameOfLifeComponent implements OnInit {
+export class DijkstraComponent implements OnInit {
   rows: number;
   cols: number;
   table: number[];
@@ -18,8 +17,9 @@ export class ConwaysGameOfLifeComponent implements OnInit {
   speed = 500;
   animation;
   stopped:boolean;
-  status = "stopped"
+  status = "stopped";
 
+  
   constructor(private timer: TimingService) { }
 
   ngOnInit() {
@@ -124,4 +124,5 @@ export class ConwaysGameOfLifeComponent implements OnInit {
     n -= this.table[x][y];
     return n;
   }
+
 }

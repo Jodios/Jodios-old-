@@ -1,7 +1,10 @@
 
-<nav class="navbar navbar-expand-lg sticky-top">
+<nav class="navbar navbar-expand-lg sticky-top mainColor ">
     
-    <a routerLink="/" class="navbar-brand" ><img src="../../assets/icon.png"></a>
+    <a routerLink="/" class="navbar-brand" >
+        <!-- <img src="../../assets/icon.svg"> -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 925 254"><defs><style></style></defs><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M664.35,50.78q-14.79,0-21.63,14.63t-6.83,58.35q0,42.93,6.75,58t21.71,15.1q14.79,0,21.7-14.47T693,123.76q0-43.87-6.84-58.43T664.35,50.78Z"/><path class="cls-1" d="M402.18,57.86q-9-5.32-24.64-5.33H369.4V195.15h8.14q16.57,0,25.67-6.36t14.51-22.21q5.43-15.84,5.43-45.76,0-27.7-6-42.66T402.18,57.86Z"/><path class="cls-1" d="M209.61,50.78q-14.79,0-21.62,14.63t-6.84,58.35q0,42.93,6.76,58t21.7,15.1q14.79,0,21.7-14.47t6.92-58.67q0-43.87-6.84-58.43T209.61,50.78Z"/><path class="cls-1" d="M895.13,0H29.87A29.87,29.87,0,0,0,0,29.87V224.13A29.87,29.87,0,0,0,29.87,254H895.13A29.87,29.87,0,0,0,925,224.13V29.87A29.87,29.87,0,0,0,895.13,0ZM98.79,159.38q0,27.51-4.06,42.85A42.33,42.33,0,0,1,78,226.64q-12.72,9.06-37.69,9.06-10.8,0-29.09-3.34V192.45a103.37,103.37,0,0,0,19.24,2.23q12.55,0,16.61-6.76t4.06-28.54V15.32h47.7Zm111,76.32q-39.12,0-59-28.54t-19.88-83.4Q130.9,12,209.61,12q38.47,0,58.67,28t20.19,83.79Q288.47,235.71,209.77,235.7Zm256-61q-7.63,22.67-20,35.7t-28,17.49q-15.58,4.46-39,4.45H321.7v-217h51.36q33.39,0,54.3,9t33.47,33.15q12.56,24.16,12.56,65.35Q473.39,152.06,465.76,174.72Zm86.65,57.64h-47.7v-217h47.7Zm112.1,3.34q-39.12,0-59-28.54t-19.88-83.4Q585.64,12,664.35,12,702.83,12,723,40t20.19,83.79Q743.21,235.71,664.51,235.7Zm228.08-19.48q-20.91,19.49-56.05,19.48-59,0-75.36-59.63l41.66-11.92q7.62,32.76,34.82,32.75,12.4,0,20.11-6.44a21,21,0,0,0,7.71-16.93,21.24,21.24,0,0,0-5.4-14.23Q854.67,153,835.27,146q-25-8.9-37.2-16.14a57.19,57.19,0,0,1-20.2-20.67q-7.95-13.42-8-30.6,0-29.26,18.84-47.94T838.61,12q56.61,0,70.6,50.56l-39.43,15.1q-8.43-26.87-30.85-26.87-10.5,0-16.62,6a18.86,18.86,0,0,0-6.12,13.92,17.48,17.48,0,0,0,7.24,14.7q7.23,5.49,30.29,14.39,21,7.8,33,15.43a57.52,57.52,0,0,1,19.4,20.75q7.39,13.11,7.39,30.44Q913.5,196.75,892.59,216.22Z"/></g></g></svg>
+    </a>
     
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
@@ -14,18 +17,38 @@
                 <div ngbDropdown class="d-inline-block">
                     <a ngbDropdownToggle id="dropdownBasic1" class="nav-link dropdown">Sorting</a>
                     <div ngbDropdownMenu aria-labelledby="dropdownBasic1" style="background-color: rgb(40, 42, 46);">
-                        <a ngbDropdownItem [routerLink]="['/sorting/bubble-sort']" >Bubble Sort</a>
-                        <a ngbDropdownItem disabled style="text-decoration:line-through;">Quick Sort</a>
-                        <a ngbDropdownItem disabled style="text-decoration:line-through;">Selection Sort</a>
+                        <a ngbDropdownItem [routerLink]="['/sorting/bubble-sort']" class="contentColor">Bubble Sort</a>
+                        <a ngbDropdownItem [routerLink]="['/sorting/quick-sort']" class="contentColor">Quick Sort</a>
+                        <a ngbDropdownItem [routerLink]="['/sorting/insertion-sort']" class="contentColor">Insertion Sort</a>
+                        <a ngbDropdownItem disabled style="text-decoration:line-through;" class="contentColor">Selection Sort</a>
                     </div>
                 </div>
+                <i class="fa fa-bars fa-2x"></i>
             </li>       
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <div ngbDropdown class="d-inline-block">
                     <a ngbDropdownToggle id="dropdownBasic1" class="nav-link dropdown">Path Finding</a>
                     <div ngbDropdownMenu aria-labelledby="dropdownBasic1" style="background-color: rgb(40, 42, 46);">
-                        <a ngbDropdownItem disabled style="text-decoration:line-through;">Dijkstra's algorithm</a>
+                        <a ngbDropdownItem [routerLink]="['/path-finding/dijkstra']" >Dijkstra's algorithm</a>
+                    </div>
+                </div>
+            </li> -->
+
+            <li class="nav-item">
+                <div ngbDropdown class="d-inline-block">
+                    <a ngbDropdownToggle id="dropdownBasic1" class="nav-link dropdown">Physics</a>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" style="background-color: rgb(40, 42, 46);">
+                        <a ngbDropdownItem [routerLink]="['/physics/double-pendulum']" >Double Pendulum</a>
+                    </div>
+                </div>
+            </li>
+            
+            <li class="nav-item">
+                <div ngbDropdown class="d-inline-block">
+                    <a ngbDropdownToggle id="dropdownBasic1" class="nav-link dropdown">Maths</a>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" style="background-color: rgb(40, 42, 46);">
+                        <a ngbDropdownItem [routerLink]="['/maths/fourier']" >Fourier Series</a>
                     </div>
                 </div>
             </li>

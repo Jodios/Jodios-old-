@@ -1,6 +1,6 @@
 .profilePic{
-    width:150px;
-    height: 150px;
+    width:50%;
+    height: 50%;
     border-radius: 100%;
 }
 mat-icon{
@@ -12,6 +12,11 @@ header{
     text-align: center;
 }
 
+.card:hover{
+    transform: translateY(-4px);
+    transition: 100ms;
+}
+
 .interests{
     border:none;
     background-color:#008cff;
@@ -21,4 +26,6 @@ header{
     border:none;
     background-color:#007adf;
     margin: 5px;
+    transform: translate3d(0px,-2px,0px);
+    transition: 100ms;
 }

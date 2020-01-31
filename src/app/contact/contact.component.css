@@ -1,7 +1,11 @@
 form{
-    width: 50%;
+    width: 60%;
+    margin:auto;
+    margin-top: 20%;
 }
-
+.main{
+    border: none;
+}
 input, 
 input:focus{
     border-radius: 0;

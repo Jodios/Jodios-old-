@@ -1,25 +1,28 @@
 a{
-
     cursor: pointer;
 }
 nav{
-    background-color: rgb(29, 31, 33);
     border-bottom-style: solid;
     border-bottom-color: rgb(23, 24, 26);
     z-index: 10000;
 }
 nav a{
     color:rgb(0, 140, 255);
+    border-right-style: solid;
+    border-right-color: rgb(23, 24, 26);
 }
 nav a:hover{
     color:rgb(0, 103, 187);
 }
-.navbar-brand img{
-    color:rgb(0, 140, 255);
-    font-size: 25px;
-    max-width: 45px;
-    max-height: 45px;
+
+.navbar-brand{
+    width:10%;
 }
-nav .dropdown a:hover{
-    background-color: rgb(29, 31, 33);
+svg{
+    fill:#008cff;
+}
+svg:hover{
+    fill:#0074d3;
+    box-shadow: #001525 4px 4px;
+    transition: 400ms;
 }

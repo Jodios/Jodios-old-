@@ -27,6 +27,11 @@ import { environment } from 'src/environments/environment';
 import { EmailService } from './services/email.service';
 import { HttpClientModule } from '@angular/common/http'
 import { fb } from 'config';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { DijkstraComponent } from './pathFinding/dijkstra/dijkstra.component';
+import { DoublePendulumComponent } from './physics/double-pendulum/double-pendulum.component';
+import { FourierComponent } from './math/fourier/fourier.component';
+import { InsertionSortComponent } from './sorting/insertion-sort/insertion-sort.component';
 
 
 const routes = [
@@ -35,7 +40,12 @@ const routes = [
   {path:"contact", component:ContactComponent},
   {path:"sorting/quick-sort", component: QuickSortComponent},
   {path:"sorting/bubble-sort", component: BubbleSortComponent},
+  {path:"sorting/insertion-sort", component: InsertionSortComponent},
   {path:"sorting/selection-sort", component: SelectionSortComponent},
+  {path:"path-finding/dijkstra", component: DijkstraComponent},
+  {path:"physics/double-pendulum", component: DoublePendulumComponent},
+  {path:"maths/fourier", component: FourierComponent},
+  {path:"**", component:NotFoundComponent},
 ]
 
 @NgModule({
@@ -47,7 +57,12 @@ const routes = [
     ContactComponent,
     QuickSortComponent,
     BubbleSortComponent,
-    SelectionSortComponent
+    SelectionSortComponent,
+    NotFoundComponent,
+    DijkstraComponent,
+    DoublePendulumComponent,
+    FourierComponent,
+    InsertionSortComponent
   ],
   imports: [
     BrowserModule,

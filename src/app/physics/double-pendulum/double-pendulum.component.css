@@ -1,0 +1,23 @@
+canvas{
+    background: none;
+    border-style: solid;
+    width: 50%;
+    height: 70%;
+}
+.left{
+    text-align: center;
+}
+.layer1{
+    position: absolute;
+    left:25%;
+    border:none;
+    background: none;
+    z-index: 0;
+}
+.layer2{
+    position: absolute;
+    left:25%;
+    border:none;
+    background: none;
+    z-index: 1;
+}

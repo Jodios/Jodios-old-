@@ -1,0 +1,15 @@
+<div class="wrapper">
+    <div class="left">   
+        g<mat-slider step=".1" thumbLabel tickInterval="interval" [(ngModel)]="g" min=".1" max="10"></mat-slider>{{g}}<br>    
+        r1<mat-slider step="10" thumbLabel tickInterval="interval" [(ngModel)]="r1" min="10" max="200"></mat-slider>{{r1}}<br>
+        r2<mat-slider step="10" thumbLabel tickInterval="interval" [(ngModel)]="r2" min="10" max="200"></mat-slider>{{r2}}<br>
+        m1<mat-slider step="10" thumbLabel tickInterval="interval" [(ngModel)]="m1" min="10" max="200"></mat-slider>{{m1}}<br>
+        m2<mat-slider step="10" thumbLabel tickInterval="interval" [(ngModel)]="m2" min="10" max="200"></mat-slider>{{m2}}<br>
+        <button class="btn btn-primary" (click)="reset()">Reset</button>
+    </div>
+    <div class="main">
+        <canvas #myCanvas class="layer1"></canvas>
+        <canvas #tracer class="layer2"></canvas>
+    </div>
+    <div class="right"></div>
+</div>

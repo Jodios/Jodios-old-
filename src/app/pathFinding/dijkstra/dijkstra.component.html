@@ -1,0 +1,17 @@
+<div class="wrapper">
+    <div class="left"></div>
+    <div class="main">
+        <header><h1 style="text-align: center;">Dijkstra's Algorithm</h1></header>
+        <div class="container" 
+        [style.width.px] = "width" 
+        [style.height.px] = "height" >
+            <div *ngFor="let x of table; let i = index" >
+                <div *ngFor="let y of x; let j = index" class="node" (click) = "toggle(i,j)"  
+                [class.alive] = "y" 
+                [style.width.px] = "resolution" 
+                [style.height.px] = "resolution" ></div>
+            </div>
+        </div>
+    </div>
+    <div class="right"></div>
+</div>
