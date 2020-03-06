@@ -46,6 +46,9 @@ nav .contentColor:hover{
 .right{
     padding: 10px;
 }
+button{
+    margin:10px;
+}
 
 .btn-primary{
     background-color: #008cff;
