@@ -11,17 +11,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { MatIconModule } from '@angular/material/icon';
-import { ContactComponent } from './contact/contact.component';
 import { QuickSortComponent } from './sorting/quick-sort/quick-sort.component';
 import { BubbleSortComponent } from './sorting/bubble-sort/bubble-sort.component';
 import { SelectionSortComponent } from './sorting/selection-sort/selection-sort.component'
 import { TimingService } from './services/timing-service.service';
-import { AngularFireFunctionsModule } from '@angular/fire/functions'
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { EmailService } from './services/email.service';
 import { HttpClientModule } from '@angular/common/http'
-import { fb } from 'config';
+import { fb } from './config';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DijkstraComponent } from './pathFinding/dijkstra/dijkstra.component';
 import { DoublePendulumComponent } from './physics/double-pendulum/double-pendulum.component';
@@ -35,7 +33,6 @@ import { InsertionSortComponent } from './sorting/insertion-sort/insertion-sort.
     ConwaysGameOfLifeComponent,
     NavbarComponent,
     HomeComponent,
-    ContactComponent,
     QuickSortComponent,
     BubbleSortComponent,
     SelectionSortComponent,
@@ -58,7 +55,6 @@ import { InsertionSortComponent } from './sorting/insertion-sort/insertion-sort.
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(fb.firebase),
-    AngularFireFunctionsModule,
     AngularFireModule,
     AngularFireDatabaseModule,
     HttpClientModule

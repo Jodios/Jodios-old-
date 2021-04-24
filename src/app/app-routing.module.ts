@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ConwaysGameOfLifeComponent } from './conways-game-of-life/conways-game-of-life.component';
-import { ContactComponent } from './contact/contact.component';
 import { QuickSortComponent } from './sorting/quick-sort/quick-sort.component';
 import { BubbleSortComponent } from './sorting/bubble-sort/bubble-sort.component';
 import { InsertionSortComponent } from './sorting/insertion-sort/insertion-sort.component';
@@ -16,7 +15,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
 const routes: Routes = [
   {path:"", component:HomeComponent},
   {path:"conways-game-of-life", component:ConwaysGameOfLifeComponent},
-  {path:"contact", component:ContactComponent},
   {path:"sorting/quick-sort", component: QuickSortComponent},
   {path:"sorting/bubble-sort", component: BubbleSortComponent},
   {path:"sorting/insertion-sort", component: InsertionSortComponent},
